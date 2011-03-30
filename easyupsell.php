@@ -34,7 +34,7 @@ add_action( 'init', 'easyupsell_init' );
 endif;
 if ( !function_exists( 'easyupsell_products' ) ):
 function easyupsell_products() {
-	$upsells = new WP_Query('easyupsell=upsell');
+	$upsells = new WP_Query('easyupsell=upsell&orderby=menu_order');
 	$upsellcount = count($upsells);
 	if ( $upsellcount == 0 ) return;
 	
